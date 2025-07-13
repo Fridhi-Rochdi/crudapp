@@ -31,7 +31,10 @@ export const todos = pgTable("todos", {
 });
 
 export const todosRelations = relations(todos, ({ one }) => ({
-  user: one(users, { fields: [todos.userId], references: [users.id] }),
+  user: one(users, {
+    fields: [todos.userId],
+    references: [users.id],
+  }),
 }));
 
 export const usersRelations = relations(users, ({ many }) => ({
