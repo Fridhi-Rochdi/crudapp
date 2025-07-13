@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Todos.jsx", "types/todoType.js", "components/Todo.jsx", "components/Navbar.jsx", "components/Dashboard.jsx", "components/AddTodo.jsx", "app/page.jsx", "app/api/webhooks/clerk/route.js", "app/sign-in/[[...sign-in]]/page.jsx", "app/sign-up/[[...sign-up]]/page.jsx", "app/layout.jsx"],
   "exclude": ["node_modules"]
 }

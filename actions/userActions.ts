@@ -10,8 +10,9 @@ export const getAllUsers = async () => {
   return data;
 };
 
-export const getUser = async (userId: any) => {
-  const user = await db.query.users.findMany({
+
+export const getUser = async (userId: string) => {
+  const user = await db.query.users.findFirst({
     where: (users, { eq }) => eq(users.clerkId, userId),
     with: {
       todos: true,
@@ -20,6 +21,7 @@ export const getUser = async (userId: any) => {
 
   return user;
 };
+
 
 export const addUser = async (user: any) => {
   await db
